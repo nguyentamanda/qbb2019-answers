@@ -10,6 +10,12 @@ else:
 
 count = 0
 for line in f:
-    count += 1
+    if line.startswith("@"):
+        continue 
+    fields = line.split("\t")
+    if fields[5] == "*":
+        continue 
+    else:
+        count += 1
 print (count)
     
