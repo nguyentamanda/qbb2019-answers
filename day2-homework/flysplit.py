@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+"""
+Parses the FlyBase genes files to include only the geneIDs and UNiProtIDs
+
+usage: ./flysplit.py <gene file name>
+"""
 
 import sys 
 
