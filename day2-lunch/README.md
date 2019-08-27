@@ -11,7 +11,9 @@
 1e) stringtie SRR072893-hisat.bam  -G ../genomes/BDGP6.Ensembl.81.gtf -e -B -p 4 -o output.gtf
 
 3) cut -f 3 SRR072893-hisat2.sam | grep -v "*" | grep -v "LN" | grep -v "SO" | grep -v "PN" | uniq -c | grep -v "21" | /
-grep -v -i "unmapped" | grep -v "mapped" | grep -v "dmel" | grep -v "r"
+grep -v -i "unmapped" | grep -v "mapped" | grep -v "dmel" | grep -v "r" #grep against it
+
+grep "^SRR072893" SRR072893-hisat2.sam | cut -f 3 | sort | uniq -c #another way, grep for it 
 
 3071588 X
 12826 Y
