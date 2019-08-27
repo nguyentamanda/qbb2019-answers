@@ -17,4 +17,4 @@ for i, line in enumerate(f):
         continue
     flyac=column[-2] #-1 is the last column, and -2 is the second to last column
     flyid=column[-1]
-    print (flyid,'\t',flyac)
+    print (flyid,flyac,sep = "\t")
