@@ -17,10 +17,7 @@ for line in f:
     flyid=columns[0]
     flyac=columns[1]
     genes[flyid]=flyac
-
-for lne in enumerate(g):
-    if lne == 0:
-        continue 
+for lne in g:
     cols=lne.rstrip("\n").split() #strips the newline character on the cols
     fly_ctab = cols[8]
     lnez=lne.rstrip("\n") #strips the newline characters on the lines
