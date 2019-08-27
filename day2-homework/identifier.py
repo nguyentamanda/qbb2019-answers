@@ -14,12 +14,13 @@ genes={}
 
 for line in f:
     columns = line.rstrip("\n").split("\t")
-    print(columns)
     flyid=columns[0]
     flyac=columns[1]
     genes[flyid]=flyac
 
-for lne in g:
+for lne in enumerate(g):
+    if lne == 0:
+        continue 
     cols=lne.rstrip("\n").split() #strips the newline character on the cols
     fly_ctab = cols[8]
     lnez=lne.rstrip("\n") #strips the newline characters on the lines
