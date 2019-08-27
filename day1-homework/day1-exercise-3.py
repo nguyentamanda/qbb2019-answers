@@ -17,3 +17,6 @@ for line in f:
             count += 1
 
 print (count)
+
+#This would only work if the last column was tab separated, as in this case. But, if the tags were space separated then we would need to take a different approach
+#probably using if X in line Y, or something like that 
