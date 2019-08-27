@@ -1,16 +1,16 @@
-head -n 40000 SRR072893.fastq > SRR072893.10k.fastq
+1a) head -n 40000 SRR072893.fastq > SRR072893.10k.fastq
 
-fastqc SRR072893.10k.fastq 
+1b) fastqc SRR072893.10k.fastq 
 
-hisat2 -p 4 -x ../genomes/BDGP6 -U SRR072893.10k.fastq -S SRR072893-hisat2.sam
+1c) hisat2 -p 4 -x ../genomes/BDGP6 -U SRR072893.10k.fastq -S SRR072893-hisat2.sam
 
-samtools sort -o SRR072893-hisat.bam SRR072893-hisat2.sam
+1d) samtools sort -o SRR072893-hisat.bam SRR072893-hisat2.sam
 
-samtools index SRR072893-hisat.bam 
+1d) samtools index SRR072893-hisat.bam 
 
-stringtie SRR072893-hisat.bam  -G ../genomes/BDGP6.Ensembl.81.gtf -e -B -p 4 -o output.gtf
+1e) stringtie SRR072893-hisat.bam  -G ../genomes/BDGP6.Ensembl.81.gtf -e -B -p 4 -o output.gtf
 
-cut -f 3 SRR072893-hisat2.sam | grep -v "*" | grep -v "LN" | grep -v "SO" | grep -v "PN" | uniq -c | grep -v "21" | /
+3) cut -f 3 SRR072893-hisat2.sam | grep -v "*" | grep -v "LN" | grep -v "SO" | grep -v "PN" | uniq -c | grep -v "21" | /
 grep -v -i "unmapped" | grep -v "mapped" | grep -v "dmel" | grep -v "r"
 
 3071588 X
