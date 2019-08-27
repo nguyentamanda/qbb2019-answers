@@ -1,0 +1,16 @@
+*.zip
+*.html
+*.gtf
+*.bam
+*.sam
+*.bai
+*.fastq
+*.bed
+
+day1-afternnon
+day2-lunch
+day1-lunch 
+day2-morning 
+genomes
+rawdata
+results
