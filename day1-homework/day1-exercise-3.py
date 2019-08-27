@@ -10,7 +10,7 @@ else:
 
 count = 0
 for line in f:
-    line = line.rstrip("\n")
+    line = line.rstrip("\n") #strip the return so that it reads just the reads with the NH:i:1 without the space afterwards
     fields = line.split("\t")
     for field in fields:
         if field == "NH:i:1":
