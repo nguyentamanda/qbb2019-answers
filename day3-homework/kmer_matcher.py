@@ -24,7 +24,7 @@ for ident, sequence in target:
         else: 
             target_dict[kmer]=[(ident, i)]
 
-for idnt, seq in query:
+for ident, seq in query:
     seq = seq.upper()
     for i in range(0, len(seq)-k+1):
         kmers=seq[i:i+k]
