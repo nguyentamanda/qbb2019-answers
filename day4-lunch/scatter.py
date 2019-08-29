@@ -27,7 +27,12 @@ fig, ax = plt.subplots()
 # print(np.log2(df.loc[:,name1]))
 ax.scatter(np.log2( df.loc[:,name1]+0.001), np.log2(df.loc[:,name2]+0.001), alpha = 0.1)
 
-np.polyfit(np.log2( df.loc[:,name1]+0.001), np.log2(df.loc[:,name2]+0.001), deg = 1)
+xx = np.log2(df.loc[:,name1]+0.001)
+yy = np.log2(df.loc[:,name2]+0.001)
+
+m, b = np.polyfit(xx, yy, deg = 1)
+
+x = [xx.min, yy.max]
 
 plt.title("FPKM1 vs FPKM2")
 plt.xlabel("log2 FPKM1")
