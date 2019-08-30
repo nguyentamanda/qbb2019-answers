@@ -20,9 +20,9 @@ for i, t in genes.iterrows():
         t_name = t.loc["t_name"]
         
         if protb > 0: 
-            print(a, prota, protb, t_name, sep = "\t")
+            print(a, protb, prota, t_name, sep = "\t")
         else:
-            print(a, prota, t.loc["start"], t_name, sep = "\t")
+            print(a, t.loc["start"], prota, t_name, sep = "\t")
     
     elif t.loc["strand"]=="-":
         protc = int(t.loc["end"])+500
@@ -31,7 +31,7 @@ for i, t in genes.iterrows():
         t_name = t.loc["t_name"]
     
         if protd > 0: 
-            print(a, protc, protd, t_name, sep = "\t")
+            print(a, protd, protc, t_name, sep = "\t")
         else:
-            print(a, protc, t.loc["start"], t_name, sep = "\t")
+            print(a, t.loc["start"], protc, t_name, sep = "\t")
 
