@@ -18,12 +18,20 @@ for i, t in genes.iterrows():
         protb = int(t.loc["start"]) - 500
         a = t.loc["chr"]
         t_name = t.loc["t_name"]
-        print(a, prota, protb, t_name, sep = "\t")
+        
+        if protb > 0: 
+            print(a, prota, protb, t_name, sep = "\t")
+        else:
+            print(a, prota, t.loc["start"], t_name, sep = "\t")
     
     elif t.loc["strand"]=="-":
         protc = int(t.loc["end"])+500
         protd = int(t.loc["end"])-500
         a = t.loc["chr"]
         t_name = t.loc["t_name"]
-        print(a, protc, protd, t_name, sep = "\t")
+    
+        if protd > 0: 
+            print(a, protc, protd, t_name, sep = "\t")
+        else:
+            print(a, protc, t.loc["start"], t_name, sep = "\t")
 
