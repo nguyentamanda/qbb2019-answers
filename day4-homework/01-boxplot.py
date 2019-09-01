@@ -46,11 +46,18 @@ fig, ax = plt.subplots(2)
 
 f = np.log2(fpkms.loc[goi,females]+0.001)
 ax[0].boxplot(f.T)
-ax[0].set_title("Females")
+ax[0].set_title("Females Sxl Over Developmental Stages")
 
 m = np.log2(fpkms.loc[goi,males]+0.001)
 ax[1].boxplot(m.T)
-ax[1].set_title("Males")
+ax[1].set_title("Males Sxl Over Developmental Stages")
 
+ax[0].set_xlabel("Developmental Stages")
+ax[0].set_ylabel("log2(FPKM)")
+
+ax[1].set_xlabel("Developmental Stages")
+ax[1].set_ylabel("log2(FPKM)")
+
+plt.tight_layout()
 fig.savefig("boxplot.png")
 plt.close(fig)
