@@ -26,8 +26,8 @@ for ident, sequence in target:
 
 for ident, seq in query:
     seq = seq.upper()
-    for i in range(0, len(seq)-k+1):
-        kmers=seq[i:i+k]
+    for j in range(0, len(seq)-k+1):
+        kmers=seq[j:j+k]
         if kmers in target_dict:
-            for ident, j in target_dict[kmer]:
-                print(ident, j, i, kmer)
+            for ident, i in target_dict[kmer]: #just in case there are multiple things in for value
+                print(ident, i, j, kmer)
