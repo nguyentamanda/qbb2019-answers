@@ -23,16 +23,21 @@ fpkm={name1 : ctab1.loc[:,"FPKM"],
 
 df = pd.DataFrame(fpkm)
 
-fig, ax = plt.subplots()
+
 # print(np.log2(df.loc[:,name1]))
-ax.scatter(np.log2( df.loc[:,name1]+0.001), np.log2(df.loc[:,name2]+0.001), alpha = 0.1, s=10) #alpha is opacity, s is size
+
 
 xx = np.log2(df.loc[:,name1]+0.001)
 yy = np.log2(df.loc[:,name2]+0.001)
 
-m= np.polyfit(xx, yy, deg = 1)
+m, b= np.polyfit(xx, yy, 1)
+x=[xx.min(), yy.max()]
 
-m()
+fig, ax = plt.subplots()
+
+ax.scatter(np.log2( df.loc[:,name1]+0.001), np.log2(df.loc[:,name2]+0.001), alpha = 0.1, s=3) #alpha is opacity, s is size
+
+ax.plot(x, [(m*x1+b) for x1 in x], color = "red")
 
 plt.title("FPKM1 vs FPKM2")
 plt.xlabel("log2 FPKM1")
