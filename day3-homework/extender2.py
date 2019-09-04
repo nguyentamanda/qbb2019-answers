@@ -78,14 +78,13 @@ for ident, sequence in query: #sequence is the sequence of query
 
 
 # sorted_dict = sorted(list(extended_things.items()), key = lambda t:t[1][1])
-# for ident in extended_things:
-#     for seq in extended_things[ident]:
-#         seq.sort(key = lambda x:x[1])
-#         print(ident, seq)
+for ident in extended_things:
+    for extended_kmer in sorted(extended_things[ident], key = lambda t:t[1]):
+        print (ident, extended_kmer)
 
-sorted_dict = sorted(extended_things.items(), key = lambda t:t[1])                  
-for ident, seq in sorted_dict:
-    for extended_kmer in seq:
-        print(ident, extended_kmer)
+# sorted_dict = sorted(extended_things.items(), key = lambda t:t[1])
+# for ident, seq in sorted_dict:
+#     for extended_kmer in seq:
+#         print(ident, extended_kmer)
 
                     
