@@ -1,0 +1,30 @@
+*** Spades Low 
+Number of contigs = 143
+Max length = 1335
+Min length = 36
+Average length= 349.53146853146853
+N50 =  368
+*** Velvet Low
+Number of contigs = 286
+Max length = 1333
+Min length = 41
+Average length= 215.22027972027973
+N50 =  290
+*** Spades Longer
+Number of contigs = 5168
+Max length = 9888
+Min length = 22
+Average length= 91.4094427244582
+N50 =  252
+*** Spades Better
+Number of contigs = 20
+Max length = 27803
+Min length = 22
+Average length= 5014.05
+N50 =  13395
+*** Velvet Better
+Number of contigs = 17
+Max length = 27802
+Min length = 41
+Average length= 5884.64705882353
+N50 =  13390
