@@ -20,7 +20,7 @@ mate 04-Cell_Tpes.py
 
 'Malat1': mouse hippocampus neurons
 'Ccna2': Neuronal intermediate progenitor cells
-'mt-Atp6': Enteric glia
+'mt-Atp6': Cholinergic enteric neurons
 'Lhx6': Ivy and MGE-derived neurogliaform cells
 'mt-Cytb': Excitatory neurons, cerebral cortex
 'Zbtb20': Excitatory neurons, cerebral cortex
